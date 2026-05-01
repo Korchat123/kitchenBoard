@@ -21,9 +21,9 @@ export default function CookBoard() {
                 return false;
             }).map((list) => (
                 whichBoard === "finished" ? (
-                 <MenuList order={e} list={list}></MenuList>
+                 <MenuList key={`${whichBoard}-${e.orderId}-${list.id}`} order={e} list={list}/>
                 ) : (
-                 <MenuList order={e} list={list}></MenuList>
+                 <MenuList key={`${whichBoard}-${e.orderId}-${list.id}`} order={e} list={list}/>
                 )
             ))
         )
